@@ -2,17 +2,14 @@ package com.alian.roomdatabase.fragments.add
 
 import android.os.Bundle
 import android.text.TextUtils
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.AndroidViewModel
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.alian.roomdatabase.R
-import com.alian.roomdatabase.data.User
-import com.alian.roomdatabase.data.UserViewModel
+import com.alian.roomdatabase.model.User
+import com.alian.roomdatabase.viewmodel.UserViewModel
 import com.alian.roomdatabase.databinding.FragmentAddBinding
 
 

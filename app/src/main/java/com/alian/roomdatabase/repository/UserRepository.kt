@@ -1,6 +1,8 @@
-package com.alian.roomdatabase.data
+package com.alian.roomdatabase.repository
 
 import androidx.lifecycle.LiveData
+import com.alian.roomdatabase.data.UserDao
+import com.alian.roomdatabase.model.User
 
 class UserRepository(private val userDao: UserDao) {
 
@@ -8,5 +10,9 @@ class UserRepository(private val userDao: UserDao) {
 
     suspend fun addUser(user: User) {
         userDao.addUser(user)
+    }
+
+    suspend fun updateUser(user: User) {
+        userDao.updateUser(user)
     }
 }
