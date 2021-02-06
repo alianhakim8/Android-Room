@@ -5,6 +5,7 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.alian.roomdatabase.R
@@ -17,10 +18,12 @@ class UpdateFragment : Fragment(R.layout.fragment_update) {
 
     private lateinit var updateBinding: FragmentUpdateBinding
     private lateinit var mUserViewModel: UserViewModel
+
     private val args by navArgs<UpdateFragmentArgs>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
         updateBinding = FragmentUpdateBinding.bind(view)
 
         updateBinding.etFirstName.setText(args.currentUser.firstName)
