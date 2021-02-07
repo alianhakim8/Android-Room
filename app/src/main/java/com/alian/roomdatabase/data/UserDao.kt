@@ -16,4 +16,10 @@ interface UserDao {
     @Update
     suspend fun updateUser(user:User)
 
+    @Delete
+    suspend fun deleteUser(user:User)
+
+    @Query("DELETE FROM user")
+    suspend fun deleteAllUser()
+
 }

@@ -2,6 +2,7 @@ package com.alian.roomdatabase
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.FragmentManager
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
         // set action bar title following the fragment name
         setupActionBarWithNavController(findNavController(R.id.fragment))
+
+        
     }
 
     override fun onSupportNavigateUp(): Boolean {
